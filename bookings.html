@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - TripPey</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333; /* Text color */
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 2.5em; /* Larger title font size */
+        }
+
+        .navigation {
+            text-align: center;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold; /* Bold navigation links */
+            font-size: 1.2em; /* Larger navigation links font size */
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em; /* Larger section title font size */
+            margin-bottom: 30px; /* Increased margin */
+        }
+
+        .list {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px; /* Increased margin from the bottom */
+        }
+
+        .footer-text {
+            margin: 0;
+            font-size: 1.2em; /* Larger footer text font size */
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1 class="title">Welcome to TripPey</h1>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="accommodations.html">Accommodations</a></li>
+            <li class="nav-item"><a href="restaurants.html">Restaurants</a></li>
+            <li class="nav-item"><a href="activities.html">Activities</a></li>
+            <li class="nav-item"><a href="rewards.html">Rewards</a></li>
+            <li class="nav-item"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section id="bookings">
+        <h2 class="section-title">Bookings</h2>
+        <div id="bookingList" class="list">
+            <p>No upcoming bookings</p>
+        </div>
+    </section>
+
+    <!-- New: Booking History -->
+    <section id="booking-history" class="booking-history">
+        <h2 class="section-title">Booking History</h2>
+        <div id="bookingHistoryList" class="list">
+            <p>No past bookings</p>
+        </div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="footer">
+        <p class="footer-text">&copy; 2024 TripPey. All rights reserved by Team Binary Blitz.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+<script src="booking-history.js"></script> <!-- New: JavaScript file for booking history functionality -->
+
+</body>
+</html>

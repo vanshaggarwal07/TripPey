@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants - TripPey</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333; /* Text color */
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 2.5em; /* Larger title font size */
+        }
+
+        .navigation {
+            text-align: center;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold; /* Bold navigation links */
+            font-size: 1.2em; /* Larger navigation links font size */
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em; /* Larger section title font size */
+            margin-bottom: 30px; /* Increased margin */
+        }
+
+        .list {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-filter {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .search-options,
+        .filter-options {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .apply-filters {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .apply-filters:hover {
+            background-color: #555;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px; /* Increased margin from the bottom */
+        }
+
+        .footer-text {
+            margin: 0;
+            font-size: 1.2em; /* Larger footer text font size */
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1 class="title">Welcome to TripPey</h1>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="accommodations.html">Accommodations</a></li>
+            <li class="nav-item"><a href="activities.html">Activities</a></li>
+            <li class="nav-item"><a href="rewards.html">Rewards</a></li>
+            <li class="nav-item"><a href="bookings.html">Bookings</a></li>
+            <li class="nav-item"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<main class="container">
+    <section id="restaurants">
+        <h2 class="section-title">Restaurants</h2>
+        <div id="restaurantsList" class="list"></div>
+    </section>
+
+    <!-- New: Search and Filter Section -->
+    <section id="search-filter" class="search-filter">
+        <h2 class="section-title">Search and Filter</h2>
+        <div class="search-options">
+            <label for="search">Search:</label>
+            <input type="text" id="search" placeholder="Search by name...">
+        </div>
+        <div class="filter-options">
+            <label for="cuisine">Cuisine:</label>
+            <select id="cuisine">
+                <option value="">All Cuisines</option>
+                <option value="italian">Italian</option>
+                <option value="mexican">Mexican</option>
+                <option value="japanese">Japanese</option>
+                <option value="indian">Indian</option>
+                <!-- Add more cuisine options as needed -->
+            </select>
+        </div>
+        <button id="applyFilters" class="apply-filters">Apply

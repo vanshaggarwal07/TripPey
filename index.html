@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripPey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-item {
+            margin-right: 20px;
+        }
+
+        .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffc107;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .hero-text {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .map {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-text {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <h1 class="title"> <img src="logo.png" class = "logo"></h1>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="accommodations.html" class="nav-link">Accommodations</a></li>
+            <li class="nav-item"><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+            <li class="nav-item"><a href="activities.html" class="nav-link">Activities</a></li>
+            <li class="nav-item"><a href="rewards.html" class="nav-link">Rewards</a></li>
+            <li class="nav-item"><a href="bookings.html" class="nav-link">Bookings</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content Section -->
+<main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h2 class="hero-title">Explore the World with TripPey</h2>
+            <p class="hero-text">Discover new cultures, tastes, and adventures.</p>
+        </div>
+    </section>
+
+    <!-- New: Interactive Map Section -->
+    <section class="map">
+        <h2 class="section-title">Explore Destinations</h2>
+        <div id="map-container" class="map-container"></div>
+    </section>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Google Maps Example</title>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>My Google Map</h1>
+    <div id="map"></div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of your desired center
+            var center = { lat: 40.7128, lng: -74.0060 };
+            // The map, centered at your desired center
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 12, center: center });
+            // The marker, positioned at your desired center
+            var marker = new google.maps.Marker({ position: center, map: map });
+        }
+    </script>
+    <!-- Load the Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGweoKd029a1h5ZVTQlppDH4L3EdhyngI&callback=initMap" async defer></script>
+    </body>
+    </html>
+
+</main>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-text">&copy; 2024 TripPey. All rights reserved by Team Binary Blitz.</div>
+</footer>
+
+<!-- JavaScript Section -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
+<!-- New: Google Maps API Integration -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+<script src="map.js"></script>
+
+<!-- New: Real-time Chat Script -->
+<script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"></script>
+<script src="chat.js"></script>
+
+</body>
+</html>

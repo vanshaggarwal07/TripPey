@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodations - TripPey</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333; /* Text color */
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 2.5em; /* Larger title font size */
+        }
+
+        .navigation {
+            text-align: center;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold; /* Bold navigation links */
+            font-size: 1.2em; /* Larger navigation links font size */
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em; /* Larger section title font size */
+            margin-bottom: 30px; /* Increased margin */
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .option {
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .list {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px; /* Increased margin from the bottom */
+        }
+
+        .footer-text {
+            margin: 0;
+            font-size: 1.2em; /* Larger footer text font size */
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1 class="title">Explore the World with TripPey</h1>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="restaurants.html">Restaurants</a></li>
+            <li class="nav-item"><a href="activities.html">Activities</a></li>
+            <li class="nav-item"><a href="rewards.html">Rewards</a></li>
+            <li class="nav-item"><a href="bookings.html">Bookings</a></li>
+            <li class="nav-item"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section id="accommodations">
+        <h2 class="section-title">Find Your Perfect Accommodation</h2>
+        <div class="options">
+            <div class="option" id="hotels">
+                <h3>Explore Hotels</h3>
+                <p>From luxury resorts to cozy boutique hotels, find the perfect place to stay for your next adventure.</p>
+            </div>
+            <div class="option" id="resorts">
+                <h3>Discover Resorts</h3>
+                <p>Relax and unwind in breathtaking resorts surrounded by stunning natural landscapes.</p>
+            </div>
+            <div class="option" id="villas">
+                <h3>Experience Villas</h3>
+                <p>Indulge in the ultimate luxury with private villas offering unparalleled comfort and privacy.</p>
+            </div>
+        </div>
+        <div id="accommodationsList" class="list"></div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="footer">
+        <p class="footer-text">&copy; 2024 TripPey. All rights reserved by Team Binary Blitz.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
